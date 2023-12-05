@@ -1,0 +1,33 @@
+SpecialTitle{
+    --background:#000
+    --color: #52ffe4; 
+}
+
+ion-header {
+    --background:#000
+    --color: #52ffe4;
+}
+
+ion-toolbar {
+    --background:#bc2075;
+    --color: #e8e7e7;
+}
+
+ion-card {
+    --background: #e76b9d;
+    --color: rgb(239, 240, 240);
+  }
+  
+  ion-card-title {
+    --color: #ffffff;
+  }
+  
+  ion-card-subtitle {
+    --color: rgb(240, 244, 244);
+  }
+
+  ion-button {
+    --background: #bc2075;
+    padding: 5px;
+    vertical-align:auto;
+  }
