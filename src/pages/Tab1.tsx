@@ -17,9 +17,9 @@ const Tab1: React.FC = () => {
       <IonContent>
       <IonGrid fixed={true}>
         <IonRow>
-          <IonLabel>Main Courses</IonLabel>
         <IonCol size="6" size-md="4" size-lg="4">
           <IonList>
+          <IonLabel>Main Courses</IonLabel>
             <IonCard>
               <IonCardHeader>
                 <IonCardTitle>15% Off</IonCardTitle>
@@ -49,6 +49,7 @@ const Tab1: React.FC = () => {
        
         <IonCol size="6" size-md="4" size-lg="4">
           <IonList>
+          <IonLabel>Dessert Specials</IonLabel>
             <IonCard>
               <IonCardHeader>
                 <IonCardTitle>Buy 1 Get 1</IonCardTitle>
@@ -69,6 +70,7 @@ const Tab1: React.FC = () => {
         </IonCol>
           <IonCol size='6' size-md="4" size-lg="4">
             <IonList>
+            <IonLabel>Limited Time Specials</IonLabel>
               <IonCard>
                 <IonCardHeader>
                   <IonCardTitle>Extra Appetiser</IonCardTitle>
