@@ -1,10 +1,10 @@
-SpecialTitle{
-    --background:#000
+#specialTitle{
+    --background:#000;
     --color: #52ffe4; 
 }
 
 ion-header {
-    --background:#000
+    --background:#000;
     --color: #52ffe4;
 }
 
@@ -28,6 +28,25 @@ ion-card {
 
   ion-button {
     --background: #bc2075;
+    border-radius: 25px;
     padding: 5px;
     vertical-align:auto;
+  }
+
+  ion-searchbar {
+    max-width: 300px;
+    --background-color: #e76b9d;
+    --color: #e76b9d;
+    --cancel-button-color: "warning";
+    text-align: center;
+  }
+
+  ion-toast {
+    --background: rgb(26, 180, 54);
+    --border-radius: 15px;
+    --color: black;
+    --width: 300px;
+    --white-space: none;
+    text-align: center;
+    font-size: large;
   }

@@ -44,7 +44,7 @@ interface Coupon {
   subtitle: string,
   description: string,
 }
-
+/*
 const allCoupons: Coupon[][] = [
   [
 
@@ -80,8 +80,9 @@ useEffect(() => {
       ]
     }
   ]
-  setCoupons(mutableCoupons);
+  //setCoupons(mutableCoupons);
 }, []); 
+*/
 
 const App: React.FC = () => (
   <IonApp>
