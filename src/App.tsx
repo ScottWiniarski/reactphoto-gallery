@@ -9,6 +9,8 @@ import {
   IonTabs,
   setupIonicReact
 } from '@ionic/react';
+
+import React, {useState, useEffect} from 'react';
 import { IonReactRouter } from '@ionic/react-router';
 import { images, square, triangle, star } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
@@ -35,6 +37,51 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 setupIonicReact();
+
+interface Coupon {
+  id: number,
+  headline: string,
+  subtitle: string,
+  description: string,
+}
+
+const allCoupons: Coupon[][] = [
+  [
+
+  ]
+]
+
+const [coupons, setCoupons] = useState<Coupon[]>([]);
+
+useEffect(() => {
+  let mutableCoupons = [
+    {
+      id: 1,
+      name: "Main Courses",
+      items: [
+        {
+          id: 1,
+          title: "15% Off",
+          subTitle: "Entrees",
+          description: "With orders totalling at or above $40, earn 15% off on each entree." 
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Appetisers",
+      items: [
+        {
+          id: 1,
+          title: "Extra Appetiser",
+          subTitle: "Limited Time Offer!",
+          description: "With any order above $15, get a free appetiser of your choice."
+        }
+      ]
+    }
+  ]
+  setCoupons(mutableCoupons);
+}, []); 
 
 const App: React.FC = () => (
   <IonApp>
