@@ -1,0 +1,24 @@
+ion-note {
+    text-align-last: auto;
+    font-size: medium;
+    font-style: oblique;
+}
+
+.h1 {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.p {
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+ion-card {
+    padding: 10px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
