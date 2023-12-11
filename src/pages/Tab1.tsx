@@ -3,6 +3,7 @@ import { useIonToast, IonSearchbar, IonAccordion, IonAccordionGroup, IonItem, Io
     IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/react';
 import {trashBin } from 'ionicons/icons'
 import ExploreContainer from '../components/ExploreContainer';
+import PageHeader  from '../components/PageHeader';
 import './Tab1.css';
 
 
@@ -22,19 +23,12 @@ const Tab1: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader id="header">
-        <IonToolbar>
-          <IonTitle className='specialTitle'>Special Deals and Coupons</IonTitle>
-        </IonToolbar>
-        <IonToolbar>
-        <IonSearchbar showCancelButton="focus" clearIcon={trashBin} placeholder="Search Coupons"></IonSearchbar>
-        </IonToolbar>
-      </IonHeader>
+      <PageHeader name="Specials"></PageHeader>
 
       <IonContent>
       <IonGrid fixed={true}>
         <IonRow>
-        <IonCol size="6" size-md="4" size-lg="4">
+        <IonCol size="12" size-md="6" size-lg="6">
           <IonList>
           <IonItem slot='header' color="warning">
               <IonLabel>Main Courses</IonLabel>
@@ -53,7 +47,7 @@ const Tab1: React.FC = () => {
                 <IonCardSubtitle>Entrees</IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>With orders totalling at or above $60, earn 20% off on each entree.</IonCardContent>
-              <IonButton onClick={() => presentToast('top')}>Add It!</IonButton>
+              <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
             </IonCard>
             <IonCard>
               <IonCardHeader>
@@ -61,12 +55,12 @@ const Tab1: React.FC = () => {
                 <IonCardSubtitle>Entrees</IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>With orders totalling at or above $30, earn 10% off on each entree.</IonCardContent>
-              <IonButton onClick={() => presentToast('bottom')}>Add It!</IonButton>
+              <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
             </IonCard>
           </IonList>
         </IonCol>
        
-        <IonCol size="6" size-md="4" size-lg="4">
+        <IonCol size="12" size-md="6" size-lg="6" className='desserts'>
           <IonList>
             <IonItem slot='header' color="warning">
               <IonLabel>Desserts and Specials</IonLabel>
@@ -77,7 +71,7 @@ const Tab1: React.FC = () => {
                 <IonCardSubtitle>Qualifying Desserts</IonCardSubtitle>
               </IonCardHeader>
                 <IonCardContent>With orders totalling at or above $30, get a free extra dessert.</IonCardContent>
-                <IonButton onClick={() => presentToast('top')}>Add It!</IonButton>
+                <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
             </IonCard>
             <IonCard>
               <IonCardHeader>
@@ -85,11 +79,11 @@ const Tab1: React.FC = () => {
                 <IonCardSubtitle>Qualifying Desserts</IonCardSubtitle>
               </IonCardHeader>
                 <IonCardContent>With any order above $15, get a free slice of carrot cake.</IonCardContent>
-                <IonButton onClick={() => presentToast('top')}>Add It!</IonButton>
+                <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
             </IonCard>
           </IonList>
         </IonCol>
-          <IonCol size='6' size-md="4" size-lg="4">
+          <IonCol size='12' size-md="6" size-lg="6">
             <IonList>
             <IonItem slot='header' color="warning">
               <IonLabel>Limited Time Specials</IonLabel>
@@ -100,7 +94,7 @@ const Tab1: React.FC = () => {
                   <IonCardSubtitle>Limited Time Offer!</IonCardSubtitle>
                 </IonCardHeader>
                 <IonCardContent>With any order above $15, get a <code>free</code> appetiser of your choice.</IonCardContent>
-                  <IonButton onClick={() => presentToast('top')}>Add It!</IonButton>
+                  <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
               </IonCard>
             </IonList>
           </IonCol>

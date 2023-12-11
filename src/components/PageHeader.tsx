@@ -1,4 +1,4 @@
-import {IonContent, IonHeader, IonToolbar, IonTitle, IonSearchbar} from "@ionic/react";
+import { IonGrid, IonCol, IonRow ,IonContent, IonHeader, IonToolbar, IonTitle, IonSearchbar} from "@ionic/react";
 import {trashBin } from 'ionicons/icons';
 
 interface HeaderProps {
@@ -8,12 +8,18 @@ interface HeaderProps {
 const PageHeader: React.FC<HeaderProps> = ({ name }) => {
     return (
         <IonHeader id="header">
+            <IonRow>
+            <IonCol size="4">
             <IonToolbar>
-                <IonTitle>{name}</IonTitle>
+                <IonTitle slot="start">{name}</IonTitle>
             </IonToolbar>
+            </IonCol>
+            <IonCol size="8">
             <IonToolbar>
-                <IonSearchbar showCancelButton="focus" clearIcon={trashBin} placeholder="Click to Search"></IonSearchbar>
+                <IonSearchbar slot="start" showCancelButton="focus" clearIcon={trashBin} placeholder="Search"></IonSearchbar>
             </IonToolbar>
+            </IonCol>
+            </IonRow>
         </IonHeader>  
     )
 };

@@ -12,7 +12,7 @@ import {
 
 import React, {useState, useEffect} from 'react';
 import { IonReactRouter } from '@ionic/react-router';
-import { images, square, triangle, star } from 'ionicons/icons';
+import { images, square, triangle, star, restaurantOutline } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -112,8 +112,8 @@ const App: React.FC = () => (
             <IonLabel>Photos</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonIcon aria-hidden="true" icon={restaurantOutline} />
+            <IonLabel>Main Menu</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

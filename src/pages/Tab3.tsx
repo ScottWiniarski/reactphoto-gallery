@@ -1,6 +1,6 @@
 import { IonNote, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList,
   IonThumbnail, IonAccordion, IonAccordionGroup,IonItem, IonLabel, 
-  IonContent, IonFooter, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
+  IonContent, IonFooter, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonInfiniteScrollContent } from '@ionic/react';
 import React, {useRef, useEffect, useState} from 'react';  
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
@@ -38,6 +38,27 @@ const Tab3: React.FC = () => {
       description: "To be honest, we're not sure what animal this actually came from.",
       price: 14.99,
     },
+    { id: 3,
+      imgAlt: "Silhouette of mountains",
+      imageSrc: "https://ionicframework.com/docs/img/demos/thumbnail.svg", 
+      headline: "Build a Burger",
+      description: "Freely choose your own toppings with one of our 1/3 pound beef patties.",
+      price: 10.99,
+    },
+    { id: 4, 
+      imgAlt: "Silhouette of mountains",
+      imageSrc: "https://ionicframework.com/docs/img/demos/thumbnail.svg",
+      headline: "Spaghetti and Meatballs",
+      description: "Enjoy a bowl of freshly made noodles, adorned with grilled meatballs and covered in our homemade sauce.",
+      price: 12.99,
+    },
+    { id: 5,
+      imgAlt: "Silhouette of mountains",
+      imageSrc: "https://ionicframework.com/docs/img/demos/thumbnail.svg", 
+      headline: "Leg of Beast",
+      description: "To be honest, we're not sure what animal this actually came from.",
+      price: 14.99,
+    },
   ]);
 
   const [appetisers, setAppetisers] = useState([
@@ -66,7 +87,7 @@ const Tab3: React.FC = () => {
 
   return (
     <IonPage>
-      <PageHeader name="Our Menu"></PageHeader>
+      <PageHeader name="Menu"></PageHeader>
       
       <IonContent>
         <IonCard>
@@ -83,7 +104,7 @@ const Tab3: React.FC = () => {
                     <img alt={main.imgAlt} src={main.imageSrc}></img>
                   </IonThumbnail>
                   <IonLabel class="ion-text-wrap">
-                    <h1>{main.headline}</h1>
+                    <h2>{main.headline}</h2>
                     <p>{main.description}
                     <br></br>
                     <strong>${main.price}</strong>
@@ -99,11 +120,11 @@ const Tab3: React.FC = () => {
 
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>Appetisers:</IonCardTitle>
+            <IonCardTitle>Appetizers:</IonCardTitle>
             <IonCardSubtitle>To settle a snack or add to a meal.</IonCardSubtitle>
           </IonCardHeader>
           <IonCardContent>
-          <IonList>
+          <IonList inset={true} lines='full'>
             {appetisers.map(apps => {
               return (
                 <IonItem key={apps.id}>
@@ -111,7 +132,7 @@ const Tab3: React.FC = () => {
                     <img alt={apps.imgAlt} src={apps.imageSrc}></img>
                   </IonThumbnail>
                   <IonLabel class="ion-text-wrap">
-                    <h1>{apps.headline}</h1>
+                    <h2>{apps.headline}</h2>
                     <p>{apps.description}
                     <br></br>
                     <strong>${apps.price}</strong>
@@ -121,10 +142,10 @@ const Tab3: React.FC = () => {
                 </IonItem>
               )
             })}
-          </IonList>
+          </IonList>       
           </IonCardContent>
         </IonCard>
-        
+
       </IonContent>
     </IonPage>
   );

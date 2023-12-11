@@ -3,6 +3,14 @@
     --color: #52ffe4; 
 }
 
+#desserts {
+  --background: grey;
+}
+
+ion-content::part(background){
+  background: #ffffff;
+}
+
 ion-header {
     --background:#000;
     --color: #52ffe4;
@@ -42,7 +50,7 @@ ion-card {
   }
 
   ion-toast {
-    --background: rgb(26, 180, 54);
+    --background: rgb(113, 201, 129);
     --border-radius: 15px;
     --color: black;
     --width: 300px;
