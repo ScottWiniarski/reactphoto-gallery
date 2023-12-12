@@ -26,7 +26,7 @@ p {
 }
 
 ion-card {
-    padding: 15px;
+    padding: 10px;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -41,7 +41,7 @@ ion-card-title {
 }
 
 ion-item {
-    padding: 10px;
+    padding: 5px;
     margin: auto;
     border-style: dotted;
     border-color: #e76b9d;
@@ -50,12 +50,12 @@ ion-item {
 
 ion-thumbnail {
     --border-radius: 10px;
-    --size: 80px;
+    --size: 60px;
 }
 
 ion-list {
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     border-style: groove;
     border-color: #010000;
     
