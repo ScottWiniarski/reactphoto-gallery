@@ -2,11 +2,11 @@ ion-page {
     --background-color: #000000;
     
 }
-/*
+
 ion-content::part(background) {
     background: #e6e6e6;
 }
-*/
+
 ion-note {
     text-align-last: auto;
     font-size: medium;
@@ -25,10 +25,36 @@ ion-note {
 }
 
 ion-card {
-    padding: 10px;
+    padding: 15px;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
     box-shadow: 10em;
+}
+
+ion-card-title {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+ion-item {
+    padding: 10px;
+    margin: auto;
+    border-color: #e76b9d;
+    border-width: 0 0 4px 0;
+}
+
+ion-thumbnail {
+    --border-radius: 10px;
+    --size: 80px;
+}
+
+ion-list {
+    padding: 15px;
+    margin: 10px;
+    border-style: double;
+    border-color: #f24aec;
+    
 }

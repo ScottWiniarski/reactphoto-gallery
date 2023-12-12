@@ -1,5 +1,6 @@
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
+import PageHeader from '../components/PageHeader';
 import { camera, trash, close } from 'ionicons/icons';
 import {
   IonContent,
@@ -20,11 +21,7 @@ import {
 const Tab2: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Photo Gallery</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <PageHeader name='Photos'></PageHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>

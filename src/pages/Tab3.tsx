@@ -1,5 +1,5 @@
 import { IonNote, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList,
-  IonThumbnail, IonAccordion, IonAccordionGroup,IonItem, IonLabel, 
+  IonThumbnail, IonAccordion, IonAccordionGroup,IonItem, IonLabel, IonModal,
   IonContent, IonFooter, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonInfiniteScrollContent } from '@ionic/react';
 import React, {useRef, useEffect, useState} from 'react';  
 import ExploreContainer from '../components/ExploreContainer';
@@ -83,12 +83,32 @@ const Tab3: React.FC = () => {
       description: "After a few unpleasant experiences, we don't call them tenders anymore.",
       price: 11.99,
     },
+    { id: 3,
+      imgAlt: "Silhouette of mountains",
+      imageSrc: "https://ionicframework.com/docs/img/demos/thumbnail.svg", 
+      headline: "Bag of Fries",
+      description: "Salted or not, get yourself a hefty helping of our krinkle-cut fries.",
+      price: 7.99,
+    },
+    { id: 4, 
+      imgAlt: "Silhouette of mountains",
+      imageSrc: "https://ionicframework.com/docs/img/demos/thumbnail.svg",
+      headline: "Seasoned Twisters",
+      description: "Silly fries, seasoned with our own blend, grab a bag while you can.",
+      price: 9.99,
+    },
+    { id: 5,
+      imgAlt: "Silhouette of mountains",
+      imageSrc: "https://ionicframework.com/docs/img/demos/thumbnail.svg", 
+      headline: "Chicken Strips",
+      description: "After a few unpleasant experiences, we don't call them tenders anymore.",
+      price: 11.99,
+    },
   ]);
 
   return (
     <IonPage>
-      <PageHeader name="Menu"></PageHeader>
-      
+      <PageHeader name="Main Menu"></PageHeader>    
       <IonContent>
         <IonCard>
           <IonCardHeader>
@@ -96,7 +116,7 @@ const Tab3: React.FC = () => {
             <IonCardSubtitle>Can be upgraded into baskets or combo meals.</IonCardSubtitle>
           </IonCardHeader>
           <IonCardContent>
-          <IonList>
+          <IonList inset={true} lines='full'>
             {mainCourses.map(main => {
               return (
                 <IonItem key={main.id}>
@@ -110,7 +130,7 @@ const Tab3: React.FC = () => {
                     <strong>${main.price}</strong>
                     </p>
                   </IonLabel>
-                  <IonButton>Add It!</IonButton>
+                  <IonButton slot='end'>Add It!</IonButton>
                 </IonItem>
               )
             })}

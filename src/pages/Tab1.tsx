@@ -1,15 +1,21 @@
-import { useIonToast, IonSearchbar, IonAccordion, IonAccordionGroup, IonItem, IonLabel, IonList,IonButton, IonCol, IonGrid, IonRow, IonContent,
+import { useIonToast, IonModal, IonButtons, IonItemDivider, IonItemGroup, IonSearchbar, IonAccordion, IonAccordionGroup, IonItem, IonLabel, IonList,IonButton, IonCol, IonGrid, IonRow, IonContent,
    IonHeader, IonPage, IonTitle, IonToolbar,
     IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/react';
+    import React, {useState} from 'react';
 import {trashBin } from 'ionicons/icons'
 import ExploreContainer from '../components/ExploreContainer';
 import PageHeader  from '../components/PageHeader';
 import './Tab1.css';
 
 
-
-
 const Tab1: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  /*
+  function passToModal(){
+
+
+  }
+  */
   const [present] = useIonToast();
 
   const presentToast = (position: 'top' | 'middle' | 'bottom') => {
@@ -20,27 +26,60 @@ const Tab1: React.FC = () => {
     });
   };
 
+  const [coupons, setCoupons] = useState([
+    { id: 0, 
+      headline: "15% Off",
+      subtext: "Entrees",
+      description: "With orders totalling at or above $40, earn 15% off on each entree.",
+    }, 
+  ]);
+
 
   return (
     <IonPage>
-      <PageHeader name="Specials"></PageHeader>
-
+      <PageHeader name="Special Deals"></PageHeader>
       <IonContent>
       <IonGrid fixed={true}>
         <IonRow>
         <IonCol size="12" size-md="6" size-lg="6">
           <IonList>
-          <IonItem slot='header' color="warning">
-              <IonLabel>Main Courses</IonLabel>
-            </IonItem>
-            <IonCard>
-              <IonCardHeader>
-                <IonCardTitle>15% Off</IonCardTitle>
-                <IonCardSubtitle>Entrees</IonCardSubtitle>
-              </IonCardHeader>
-              <IonCardContent>With orders totalling at or above $40, earn 15% off on each entree.</IonCardContent>
-              <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
-            </IonCard>
+            <IonItemGroup>
+              <IonItemDivider className='dividers'>
+                <IonLabel>Main Courses</IonLabel>
+              </IonItemDivider>
+            </IonItemGroup>
+            {coupons.map(coupon => {
+              return (
+                <IonCard key={coupon.id}>
+                  <IonCardHeader>
+                    <IonCardTitle>{coupon.headline}</IonCardTitle>
+                    <IonCardSubtitle>{coupon.subtext}</IonCardSubtitle>
+                  </IonCardHeader>
+                  <IonCardContent>{coupon.description}</IonCardContent>
+                  <IonButton onClick={ ()=> setIsOpen(true)}>Add It!</IonButton>
+                </IonCard>
+              )
+            })}
+   
+            <IonModal isOpen={isOpen}>
+          <IonHeader>
+            <IonToolbar>
+              <IonTitle>Modal</IonTitle>
+              <IonButtons slot="end">
+                <IonButton onClick={() => setIsOpen(false)}>Close</IonButton>
+              </IonButtons>
+            </IonToolbar>
+          </IonHeader>
+          <IonContent className="ion-padding">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+              reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui.
+              Eaque, dicta.
+            </p>
+          </IonContent>
+        </IonModal>
+            
+            
             <IonCard>
               <IonCardHeader>
                 <IonCardTitle>20% Off</IonCardTitle>
@@ -59,12 +98,14 @@ const Tab1: React.FC = () => {
             </IonCard>
           </IonList>
         </IonCol>
-       
+      
         <IonCol size="12" size-md="6" size-lg="6" className='desserts'>
           <IonList>
-            <IonItem slot='header' color="warning">
-              <IonLabel>Desserts and Specials</IonLabel>
-            </IonItem>
+          <IonItemGroup>
+              <IonItemDivider className='dividers'>
+                <IonLabel>Desserts and Specials</IonLabel>
+              </IonItemDivider>
+            </IonItemGroup>
             <IonCard>
               <IonCardHeader>
                 <IonCardTitle>Buy 1 Get 1</IonCardTitle>
@@ -85,9 +126,11 @@ const Tab1: React.FC = () => {
         </IonCol>
           <IonCol size='12' size-md="6" size-lg="6">
             <IonList>
-            <IonItem slot='header' color="warning">
-              <IonLabel>Limited Time Specials</IonLabel>
-            </IonItem>
+            <IonItemGroup>
+              <IonItemDivider className='dividers'>
+                <IonLabel>Limited Time Specials</IonLabel>
+              </IonItemDivider>
+            </IonItemGroup>
               <IonCard>
                 <IonCardHeader>
                   <IonCardTitle>Extra Appetiser</IonCardTitle>
@@ -98,7 +141,7 @@ const Tab1: React.FC = () => {
               </IonCard>
             </IonList>
           </IonCol>
-
+          
         </IonRow>
       </IonGrid>
       </IonContent>
