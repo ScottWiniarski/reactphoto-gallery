@@ -12,10 +12,11 @@ import {
 
 import React, {useState, useEffect} from 'react';
 import { IonReactRouter } from '@ionic/react-router';
-import { images, square, triangle, star, restaurantOutline } from 'ionicons/icons';
+import { images, square, triangle, star, restaurantOutline, cashOutline } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import Tab4 from './pages/Tab4';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -98,6 +99,9 @@ const App: React.FC = () => (
           <Route path="/tab3">
             <Tab3 />
           </Route>
+          <Route path="/tab4">
+            <Tab4 />
+          </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
           </Route>
@@ -114,6 +118,10 @@ const App: React.FC = () => (
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={restaurantOutline} />
             <IonLabel>Main Menu</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab4" href="/tab4">
+            <IonIcon aria-hidden="true" icon={cashOutline} />
+            <IonLabel>Orders</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

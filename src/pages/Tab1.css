@@ -33,6 +33,8 @@ ion-toolbar {
 ion-card {
     --background: #e76b9d;
     --color: rgb(239, 240, 240);
+    border-style: groove;
+    border-color: #000;
   }
   
   ion-card-title {
@@ -45,9 +47,10 @@ ion-card {
 
   ion-button {
     --background: #bc2075;
-    border-radius: 25px;
     padding: 5px;
     vertical-align:auto;
+    margin: auto;
+    
   }
 /*
   ion-searchbar {

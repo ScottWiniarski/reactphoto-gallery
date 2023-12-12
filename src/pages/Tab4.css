@@ -1,0 +1,37 @@
+ion-item-divider {
+    --padding-top: 10px;
+  --padding-bottom: 10px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+
+  text-align: right;
+  text-align: end;
+  justify-content: right;
+  justify-self: right;
+}
+
+h3 {
+    justify-content: right;
+    text-align: right;
+    text-align: end;
+    color: black;
+    --color: dark;
+    font-weight: bold;
+}
+
+.taxamount::part(native) {
+    text-align: right;
+    text-align: end;
+    justify-content: right;
+}
+
+.taxation {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.totals {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -56,7 +56,7 @@ const Tab1: React.FC = () => {
                     <IonCardSubtitle>{coupon.subtext}</IonCardSubtitle>
                   </IonCardHeader>
                   <IonCardContent>{coupon.description}</IonCardContent>
-                  <IonButton onClick={ ()=> setIsOpen(true)}>Add It!</IonButton>
+                  <IonButton expand='block' shape='round' onClick={ ()=> setIsOpen(true)}>Add It!</IonButton>
                 </IonCard>
               )
             })}
@@ -66,7 +66,7 @@ const Tab1: React.FC = () => {
             <IonToolbar>
               <IonTitle>Modal</IonTitle>
               <IonButtons slot="end">
-                <IonButton onClick={() => setIsOpen(false)}>Close</IonButton>
+                <IonButton expand='block' shape='round' onClick={() => setIsOpen(false)}>Close</IonButton>
               </IonButtons>
             </IonToolbar>
           </IonHeader>
@@ -86,7 +86,7 @@ const Tab1: React.FC = () => {
                 <IonCardSubtitle>Entrees</IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>With orders totalling at or above $60, earn 20% off on each entree.</IonCardContent>
-              <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
+              <IonButton expand='block' shape='round' onClick={() => presentToast('middle')}>Add It!</IonButton>
             </IonCard>
             <IonCard>
               <IonCardHeader>
@@ -94,7 +94,7 @@ const Tab1: React.FC = () => {
                 <IonCardSubtitle>Entrees</IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>With orders totalling at or above $30, earn 10% off on each entree.</IonCardContent>
-              <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
+              <IonButton expand='block' shape='round' size='default' onClick={() => presentToast('middle')}>Add It!</IonButton>
             </IonCard>
           </IonList>
         </IonCol>
@@ -112,7 +112,7 @@ const Tab1: React.FC = () => {
                 <IonCardSubtitle>Qualifying Desserts</IonCardSubtitle>
               </IonCardHeader>
                 <IonCardContent>With orders totalling at or above $30, get a free extra dessert.</IonCardContent>
-                <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
+                <IonButton expand='block' shape='round' onClick={() => presentToast('middle')}>Add It!</IonButton>
             </IonCard>
             <IonCard>
               <IonCardHeader>
@@ -120,7 +120,7 @@ const Tab1: React.FC = () => {
                 <IonCardSubtitle>Qualifying Desserts</IonCardSubtitle>
               </IonCardHeader>
                 <IonCardContent>With any order above $15, get a free slice of carrot cake.</IonCardContent>
-                <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
+                <IonButton expand='block' shape='round' onClick={() => presentToast('middle')}>Add It!</IonButton>
             </IonCard>
           </IonList>
         </IonCol>
@@ -137,7 +137,7 @@ const Tab1: React.FC = () => {
                   <IonCardSubtitle>Limited Time Offer!</IonCardSubtitle>
                 </IonCardHeader>
                 <IonCardContent>With any order above $15, get a <code>free</code> appetiser of your choice.</IonCardContent>
-                  <IonButton onClick={() => presentToast('middle')}>Add It!</IonButton>
+                  <IonButton expand='block' shape='round' onClick={() => presentToast('middle')}>Add It!</IonButton>
               </IonCard>
             </IonList>
           </IonCol>

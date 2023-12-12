@@ -13,12 +13,13 @@ ion-note {
     font-style: oblique;
 }
 
-.h1 {
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
+h2 {
+    font-weight: bolder;
+    text-align: start;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.p {
+p {
     font-size: medium;
     font-family: sans-serif;
     font-weight: lighter;
@@ -29,7 +30,7 @@ ion-card {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     box-shadow: 10em;
 }
 
@@ -42,6 +43,7 @@ ion-card-title {
 ion-item {
     padding: 10px;
     margin: auto;
+    border-style: dotted;
     border-color: #e76b9d;
     border-width: 0 0 4px 0;
 }
@@ -52,9 +54,9 @@ ion-thumbnail {
 }
 
 ion-list {
-    padding: 15px;
+    padding: 10px;
     margin: 10px;
-    border-style: double;
-    border-color: #f24aec;
+    border-style: groove;
+    border-color: #010000;
     
 }
