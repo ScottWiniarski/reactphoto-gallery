@@ -11,7 +11,7 @@ const PageHeader: React.FC<HeaderProps> = ({ name }) => {
     return (
     <IonHeader id="header">
       <IonRow>
-      <IonCol size="4">
+      <IonCol size="5">
       <IonToolbar>
           <IonButton slot='start'>
               <IonIcon slot="start" icon={reorderThreeOutline}></IonIcon>
@@ -19,7 +19,7 @@ const PageHeader: React.FC<HeaderProps> = ({ name }) => {
           </IonButton>  
         </IonToolbar>
       </IonCol>
-      <IonCol size="8">
+      <IonCol size="7">
       <IonToolbar>
           <IonSearchbar slot="start" showCancelButton="focus" clearIcon={trashBin} placeholder="Search"></IonSearchbar>
       </IonToolbar>

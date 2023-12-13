@@ -37,7 +37,7 @@ const Tab1: React.FC = () => {
 
   return (
     <IonPage>
-      <PageHeader name="Special Deals"></PageHeader>
+      <PageHeader name="Specials"></PageHeader>
       <IonContent>
       <IonGrid fixed={true}>
         <IonRow>

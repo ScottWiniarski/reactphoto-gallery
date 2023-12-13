@@ -122,7 +122,7 @@ const Tab3: React.FC = () => {
 
   return (
     <IonPage>
-      <PageHeader name="Main Menu"></PageHeader>    
+      <PageHeader name="Menu"></PageHeader>    
       <IonContent>
         <IonCard>
           <IonCardHeader>

@@ -27,6 +27,7 @@ const Tab2: React.FC = () => {
   return (
     <IonPage>
       <PageHeader name='Photos'></PageHeader>
+      {/*
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
@@ -35,8 +36,10 @@ const Tab2: React.FC = () => {
         </IonHeader>
         <ExploreContainer name="Photo Gallery" />
       </IonContent>
-
+  */}
+      
       <IonContent>
+      
         <IonGrid>
           <IonRow>
             {photos.map((photo, index) => (

@@ -64,7 +64,7 @@ const Tab4: React.FC = () => {
         },
         { id: 4,
           imgAlt: "Silhouette of mountains",
-          imageSrc: "https://ionicframework.com/docs/img/demos/thumbnail.svg", 
+          imageSrc: legOfMuttonImage, 
           headline: "Leg of Beast",
           description: "To be honest, we're not sure what animal this actually came from.",
           price: 14.99,
@@ -121,7 +121,9 @@ const Tab4: React.FC = () => {
                 <IonItemDivider className='taxation' color={'light'}>Tax Applied: $6.83</IonItemDivider>
             </IonItem>
             
-            <IonItemDivider className='totals' slot='end'>Grand Total: ${getOrderTotal()}</IonItemDivider>
+            <IonItemDivider className='totals' slot='end'>Grand Total: ${getOrderTotal()}
+              <IonButton slot='end' color={'success'}>Check Out</IonButton>
+            </IonItemDivider>
           </IonList>
           
           </IonCardContent>
